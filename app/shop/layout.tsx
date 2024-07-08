@@ -1,11 +1,14 @@
+import { ReactNode } from "react";
+
 import Image from "next/image";
 import hero from "@/public/images/Image.png";
 import LeftSideLink from "../_components/LeftSideLink";
-export default function ShopLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+
+interface LayoutProps {
+  children: ReactNode;
+}
+
+export default function Layout({ children }: LayoutProps) {
   return (
     <>
       <section>
@@ -14,7 +17,7 @@ export default function ShopLayout({
             <Image src={hero} fill alt="hero-image" className="img-overlay" />
             <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
           </div>
-          <div className="absolute top-0 left-0 -translate-y-[10%] w-full h-full flex items-center justify-center z-[900]">
+          <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center z-[900]">
             <div className="text-center">
               <h3 className="text-white font-semibold text-5xl mb-10">Shop</h3>
               <p className="text-white text-xl mb-4 px-2">
@@ -74,8 +77,12 @@ export default function ShopLayout({
                 name="category"
                 className="mt-1 block w-full text-sm focus:outline-none apps sm:text-sm"
               >
-                <option className="" value="delivery">Quick Delivery</option>
-                <option className="" value="pickup">Pickup</option>
+                <option className="" value="delivery">
+                  Quick Delivery
+                </option>
+                <option className="" value="pickup">
+                  Pickup
+                </option>
               </select>
             </div>
             <div className="py-1 px-1 border border-[#b1034f] text-[#b1034f] bg-white rounded-md">
@@ -84,8 +91,12 @@ export default function ShopLayout({
                 name="category"
                 className="mt-1 block w-full text-sm focus:outline-none apps sm:text-sm"
               >
-                <option className="" value="delivery">Quick Delivery</option>
-                <option className="" value="pickup">Pickup</option>
+                <option className="" value="delivery">
+                  Quick Delivery
+                </option>
+                <option className="" value="pickup">
+                  Pickup
+                </option>
               </select>
             </div>
           </div>

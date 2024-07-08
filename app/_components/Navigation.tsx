@@ -57,10 +57,7 @@ const Navigation = () => {
         <div className="flex items-center gap-2">
           <p className="hidden sm:block">Cart</p>
           <div className="flex items-center">
-            <Link
-              href="/cart"
-              className="cursor-pointer flex items-center"
-            >
+            <Link href="/cart" className="cursor-pointer flex items-center">
               <PiShoppingCartThin />
 
               <div className="hidden sm:block bg-[#8b0a1a] text-[10px] px-1 py-0 rounded-full text-white">
