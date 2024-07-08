@@ -16,18 +16,26 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+body {
+  transition: all 1.5s ease-in-out;
+}
+
+.active {
+  color: #b1304f;
+  border-bottom: 3px solid #b1304f;
+}
+
+/* Add these styles to your global CSS file */
+
+input[type="radio"] {
+  accent-color: black;
+}
+
+.apps option {
+  /* appearance: none; */
 }
