@@ -23,7 +23,7 @@ export default function Layout({ children }: LayoutProps) {
           </div>
           <div className="absolute top-[50%] left-[50%] flex flex-col justify-center items-center text-white ts z-50">
             <p className="text-5xl font-semibold mb-8">Shop</p>
-            <p className="text-lg font-light w-full">
+            <p className="text-lg font-light w-full text-nowrap">
               A world of flavour in every bite
             </p>
           </div>
