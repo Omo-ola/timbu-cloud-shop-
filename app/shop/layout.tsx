@@ -12,57 +12,22 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <>
       <section>
-        <article className="w-full bg-[#efcddc] relative h-[80vh]">
-          <div className="relative w-full h-full">
-            <Image src={hero} fill alt="hero-image" className="img-overlay" />
-            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+        <article className="w-full relative ">
+          <div className="w-[100vw] h-[60vh]">
+            <Image
+              src={hero}
+              alt="hero-image"
+              fill
+              className="img-overlay h-full"
+            />
           </div>
-          <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center z-[900]">
-            <div className="text-center">
-              <h3 className="text-white font-semibold text-5xl mb-10">Shop</h3>
-              <p className="text-white text-xl mb-4 px-2">
-                A world of flavour in every bite
-              </p>
-              {/* <div className="flex gap-16 text-white">
-                <div>
-                  <Image
-                    src="/images/hero-sm.png"
-                    height="90"
-                    width={90}
-                    alt="cake-image"
-                  />
-                  <p className="text-base font-light mt-2">Birthday Cakes</p>
-                </div>
-                <div>
-                  <Image
-                    src="/images/hero-sm.png"
-                    height="90"
-                    width={90}
-                    alt="cake-image"
-                  />
-                  <p className="text-base font-light mt-2">Wedding Cakes</p>
-                </div>
-                <div>
-                  <Image
-                    src="/images/hero-sm.png"
-                    height="90"
-                    width={90}
-                    alt="cake-image"
-                  />
-                  <p className="text-base font-light mt-2">Desserts</p>
-                </div>
-                <div>
-                  <Image
-                    src="/images/hero-sm.png"
-                    height="90"
-                    width={90}
-                    alt="cake-image"
-                  />
-                  <p className="text-base font-light mt-2">Cupcakes</p>
-                </div>
-              </div> */}
-            </div>
+          <div className="absolute top-[50%] left-[50%] flex flex-col justify-center items-center text-white ts z-50">
+            <p className="text-5xl font-semibold mb-8">Shop</p>
+            <p className="text-lg font-light w-full">
+              A world of flavour in every bite
+            </p>
           </div>
+          <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
         </article>
 
         <section className="pt-4 md:flex gap-4 px-2 sm:px-12">

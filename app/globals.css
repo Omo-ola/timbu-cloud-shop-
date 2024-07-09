@@ -23,11 +23,12 @@
 }
 body {
   transition: all 1.5s ease-in-out;
+  overflow: hidden;
 }
 
 .active {
   color: #b1304f;
-  border-bottom: 3px solid #b1304f;
+  /* border-bottom: 3px solid #b1304f; */
 }
 
 /* Add these styles to your global CSS file */
@@ -36,6 +37,22 @@ input[type="radio"] {
   accent-color: black;
 }
 
-.apps option {
-  /* appearance: none; */
+ .test {
+    position: absolute;
+    z-index: 999;
+  }
+
+@media (min-width: 768px) {
+  .test {
+  position: unset;
+  transform: translateY(0);
+}
+.active {
+  color: #b1304f;
+  border-bottom: 3px solid #b1304f;
+}
+}
+
+.ts {
+  transform: translate(-50%, -50%);
 }
