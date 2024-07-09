@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { CiHeart } from "react-icons/ci";
 import { PiShoppingCartThin } from "react-icons/pi";
 
@@ -33,7 +34,9 @@ function CakeCard({ name, price, path }: CartItem) {
           Buy now
         </button>
         <div className="flex items-center text-lg">
-          <PiShoppingCartThin />
+          <Link href={"/cart"}>
+            <PiShoppingCartThin />
+          </Link>
         </div>
       </div>
     </div>
