@@ -110,7 +110,7 @@ const Navigation = () => {
           <div className="flex items-center">
             <Link href="/cart" className="cursor-pointer flex items-center">
               <PiShoppingCartThin />
-              <div className="hidden sm:block bg-[#8b0a1a] px-1 text-[7px] py-[-1rem] rounded-full text-white">
+              <div className="hidden sm:flex bg-[#8b0a1a] text-[10px] text-center h-[20px] w-[20px] items-center justify-center rounded-full text-white">
                 10+
               </div>
             </Link>
