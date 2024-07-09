@@ -42,7 +42,7 @@ const Navigation = () => {
         VUECAKES
       </h2>
       <div
-        className="bg-[#ccc] md:bg-transparent flex-col md:flex-row px-4 text-black flex justify-between gap-4 lg:gap-4 md:items-center md:text-[#ccc] rounded-md py-4 md:py-0 test right-0 top-[100%] -translate-y-[260%]"
+        className="bg-[#ccc] md:bg-transparent flex-col md:flex-row px-4 text-black flex justify-between gap-4 lg:gap-4 md:items-center md:text-[#ccc] rounded-bl-md py-4 md:py-0 test right-0 top-[100%] -translate-y-[260%]"
         ref={ref}
       >
         <Link
@@ -78,6 +78,17 @@ const Navigation = () => {
           </div>
           Contact
         </Link>
+        <Link
+          href="/"
+          className={`hover:text-[#b1034f] text-lg  font-medium cursor-pointer ${
+            pathname === "/wishlist" ? "active" : ""
+          } flex gap-6 item-center md:hidden`}
+        >
+          <div className="md:hidden text-2xl">
+            <CiHeart />
+          </div>
+          Wishlist
+        </Link>
       </div>
 
       <div className="flex gap-2 md:gap-4 items-center text-lg cursor-pointer">
@@ -99,7 +110,7 @@ const Navigation = () => {
           <div className="flex items-center">
             <Link href="/cart" className="cursor-pointer flex items-center">
               <PiShoppingCartThin />
-              <div className="hidden sm:block bg-[#8b0a1a] text-[10px] px-1 py-0 rounded-full text-white">
+              <div className="hidden sm:block bg-[#8b0a1a] px-1 text-[7px] py-[-1rem] rounded-full text-white">
                 10+
               </div>
             </Link>

@@ -4,7 +4,7 @@ import { Shop } from "../_ui/Shop";
 const page = () => {
   return (
     <article>
-      <p className="text-lg font-bold mb-4 text-center">
+      <p className="text-lg font-bold mb-8 text-center">
         Showing 1 - 12 of 45 items
       </p>
       <Shop />

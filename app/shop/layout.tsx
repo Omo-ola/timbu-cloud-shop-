@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 import Image from "next/image";
-import hero from "@/public/images/Image.png";
+import hero from "@/public/images/Image (3).png";
 import LeftSideLink from "../_components/LeftSideLink";
 
 interface LayoutProps {
@@ -11,14 +11,16 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   return (
     <>
-      <section>
-        <article className="w-full relative ">
-          <div className="w-[100vw] h-[60vh]">
+      <section className="">
+        <article className="w-full relative">
+          <div className="w-[100vw] h-[50vh]">
             <Image
               src={hero}
               alt="hero-image"
               fill
-              className="img-overlay h-full"
+              priority
+              quality={100}
+              className="img-overlay"
             />
           </div>
           <div className="absolute top-[50%] left-[50%] flex flex-col justify-center items-center text-white ts z-50">
@@ -27,10 +29,10 @@ export default function Layout({ children }: LayoutProps) {
               A world of flavour in every bite
             </p>
           </div>
-          <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
+          {/* <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div> */}
         </article>
 
-        <section className="pt-4 md:flex gap-4 px-2 sm:px-12">
+        <section className="pt-4 md:flex gap-4 px-2 sm:px-12 mt-8">
           <div className="basis-[25%] hidden md:flex flex-col gap-4">
             <LeftSideLink />
           </div>

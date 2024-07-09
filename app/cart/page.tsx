@@ -33,7 +33,7 @@ function page() {
                       <RiDeleteBin6Line />
                     </div>
                     <div className="h-[80px] w-[80px] relative hidden sm:block">
-                      <Image src="/images/1.png" alt="cake image" fill />
+                      <Image src="/images/cake-1.jpg" alt="cake image" fill />
                     </div>
                     <p>Red velvet single layer cake 10 inches</p>
                   </td>

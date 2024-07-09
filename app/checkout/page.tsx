@@ -115,7 +115,7 @@ function page() {
                   <p className="font-bold">N 35,000</p>
                 </div>
                 <Link
-                  href="/success"
+                  href="/checkout/payment"
                   className="w-full block mx-auto mt-4 text-white bg-[#b1034f] rounded-md py-2 text-center"
                 >
                   Order Now

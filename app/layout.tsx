@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${nunito.className} w-screen`}>
+      <body className={`${nunito.className} w-screen overflow-x-hidden`}>
         <Navigation />
         {children}
         <Footer />
