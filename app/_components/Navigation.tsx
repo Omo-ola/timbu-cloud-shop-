@@ -8,6 +8,8 @@ import { FaRegUser } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
 import { LiaHomeSolid } from "react-icons/lia";
 import { PiPhone, PiShoppingCartThin } from "react-icons/pi";
+import CustomLink from "./CustomLink";
+import { IoMdClose } from "react-icons/io";
 
 const Navigation = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
@@ -15,12 +17,14 @@ const Navigation = () => {
   const ref = useRef<HTMLDivElement>(null);
   function clickMenu() {
     const element = ref.current;
-    setMenuOpen(!menuOpen);
-    if (menuOpen) {
-      element?.classList.add("-translate-y-[260%]");
-    } else {
-      element?.classList.remove("-translate-y-[260%]");
-    }
+    setMenuOpen(true);
+    element?.classList.remove("-translate-y-[260%]");
+  }
+
+  function closeMenu() {
+    const element = ref.current;
+    setMenuOpen(false);
+    element?.classList.add("-translate-y-[260%]");
   }
 
   useEffect(() => {
@@ -45,17 +49,12 @@ const Navigation = () => {
         className="bg-[#ccc] md:bg-transparent flex-col md:flex-row px-4 text-black flex justify-between gap-4 lg:gap-4 md:items-center md:text-[#ccc] rounded-bl-md py-4 md:py-0 test right-0 top-[100%] -translate-y-[260%]"
         ref={ref}
       >
-        <Link
-          href="/"
-          className={`hover:text-[#b1034f] text-lg  font-medium cursor-pointer ${
-            pathname === "/" ? "active" : ""
-          } flex gap-6 item-center md:inline-block`}
-        >
+        <CustomLink href="/" disabled>
           <div className="md:hidden text-2xl">
             <LiaHomeSolid />
           </div>
           Home
-        </Link>
+        </CustomLink>
         <Link
           href="/shop"
           className={`hover:text-[#b1034f] text-lg  font-medium cursor-pointer ${
@@ -78,17 +77,12 @@ const Navigation = () => {
           </div>
           Contact
         </Link>
-        <Link
-          href="/"
-          className={`hover:text-[#b1034f] text-lg  font-medium cursor-pointer ${
-            pathname === "/wishlist" ? "active" : ""
-          } flex gap-6 item-center md:hidden`}
-        >
+        <CustomLink href="/wishlist" disabled>
           <div className="md:hidden text-2xl">
             <CiHeart />
           </div>
           Wishlist
-        </Link>
+        </CustomLink>
       </div>
 
       <div className="flex gap-2 md:gap-4 items-center text-lg cursor-pointer">
@@ -118,7 +112,13 @@ const Navigation = () => {
         </div>
         <div className="block md:hidden">
           <div onClick={clickMenu}>
-            <IoMenu />
+            {menuOpen ? (
+              <div onClick={closeMenu}>
+                <IoMdClose />
+              </div>
+            ) : (
+              <IoMenu />
+            )}
           </div>
         </div>
       </div>

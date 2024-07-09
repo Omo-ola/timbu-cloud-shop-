@@ -37,12 +37,12 @@ export default function Layout({ children }: LayoutProps) {
             <LeftSideLink />
           </div>
           {/* For small screen */}
-          <div className="flex md:hidden justify-between gap-2 my-4">
+          <div className="flex md:hidden justify-between gap-2 my-4 mx-4">
             <div className="py-1 px-1 border border-[#b1034f] text-[#b1034f] bg-white rounded-md">
               <select
                 id="category"
                 name="category"
-                className="mt-1 block w-full text-sm focus:outline-none apps sm:text-sm"
+                className="mt-1 block w-full text-sm focus:outline-none apps sm:text-sm bg-white"
               >
                 <option className="" value="delivery">
                   Quick Delivery
@@ -56,13 +56,13 @@ export default function Layout({ children }: LayoutProps) {
               <select
                 id="category"
                 name="category"
-                className="mt-1 block w-full text-sm focus:outline-none apps sm:text-sm"
+                className="mt-1 block w-full text-sm focus:outline-none apps sm:text-sm bg-white"
               >
-                <option className="" value="delivery">
-                  Quick Delivery
+                <option className="" value="all">
+                  Sort By
                 </option>
-                <option className="" value="pickup">
-                  Pickup
+                <option className="" value="sizes">
+                  Sizes
                 </option>
               </select>
             </div>
